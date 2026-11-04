@@ -1,0 +1,46 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ApiKeyRadar - Universal API Key Format & Secret Scanner API",
+    "description": "High-precision regex and Shannon entropy scanner recognizing 120+ cloud & payment API key formats.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://vance-systems.github.io",
+      "description": "Vance Systems Production Gateway"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check",
+        "responses": {
+          "200": {
+            "description": "Service Operational"
+          }
+        }
+      }
+    },
+    "/v1/detect/secrets": {
+      "post": {
+        "summary": "Scan text or code snippet for exposed secrets and tokens",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    },
+    "/v1/validate": {
+      "post": {
+        "summary": "Check token syntax and cryptographic entropy score",
+        "responses": {
+          "200": {
+            "description": "Successful operation"
+          }
+        }
+      }
+    }
+  }
+}
